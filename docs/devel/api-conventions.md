@@ -910,13 +910,13 @@ was not supported by the code.
   * Indicates that either the resource the client attempted to create already
 exists or the requested update operation cannot be completed due to a conflict.
   * Suggested client recovery behavior:
-  * * If creating a new resource:
-  *   * Either change the identifier and try again, or GET and compare the
-fields in the pre-existing object and issue a PUT/update to modify the existing
-object.
-  * * If updating an existing resource:
+    * If creating a new resource:
+      * Either change the identifier and try again, or GET and compare the
+        fields in the pre-existing object and issue a PUT/update to modify the
+        existing object.
+    * If updating an existing resource:
       * See `Conflict` from the `status` response section below on how to
-retrieve more information about the nature of the conflict.
+        retrieve more information about the nature of the conflict.
       * GET and compare the fields in the pre-existing object, merge changes (if
 still valid according to preconditions), and retry with the updated request
 (including `ResourceVersion`).
